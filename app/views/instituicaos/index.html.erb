@@ -1,0 +1,37 @@
+<h1>Listing instituicaos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Endereco</th>
+    <th>Uf</th>
+    <th>Bairro</th>
+    <th>Rua</th>
+    <th>Cep</th>
+    <th>Telefone</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instituicaos.each do |instituicao| %>
+  <tr>
+    <td><%= instituicao.nome %></td>
+    <td><%= instituicao.endereco %></td>
+    <td><%= instituicao.uf %></td>
+    <td><%= instituicao.bairro %></td>
+    <td><%= instituicao.rua %></td>
+    <td><%= instituicao.cep %></td>
+    <td><%= instituicao.telefone %></td>
+    <td><%= instituicao.email %></td>
+    <td><%= link_to 'Show', instituicao %></td>
+    <td><%= link_to 'Edit', edit_instituicao_path(instituicao) %></td>
+    <td><%= link_to 'Excluir', instituicao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instituicao', new_instituicao_path %>

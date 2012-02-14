@@ -1,4 +1,6 @@
 Animalbom::Application.routes.draw do
+  resources :instituicaos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
