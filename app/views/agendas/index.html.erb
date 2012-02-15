@@ -1,0 +1,31 @@
+<h1>Listing agendas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Hora</th>
+    <th>Data</th>
+    <th>Nomeinstituicao</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agendas.each do |agenda| %>
+  <tr>
+    <td><%= agenda.nome %></td>
+    <td><%= agenda.hora %></td>
+    <td><%= agenda.data %></td>
+    <td><%= agenda.nomeinstituicao %></td>
+    <td><%= agenda.status %></td>
+    <td><%= link_to 'Show', agenda %></td>
+    <td><%= link_to 'Edit', edit_agenda_path(agenda) %></td>
+    <td><%= link_to 'Excluir', agenda, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Agenda', new_agenda_path %>

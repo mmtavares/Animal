@@ -1,0 +1,8 @@
+= semantic_form_for(@agenda) do |f|
+  = f.input :nome, :label => 'nome'
+  = f.input :hora, :label => 'hora'
+  = f.input :data, :label => 'data'
+  = f.input :nomeinstituicao, :label => 'nomeinstituicao'
+  = f.input :status, :label => 'status'
+ 
+  = f.submit 'Salvar'
