@@ -1,0 +1,8 @@
+= semantic_form_for(@animal) do |f|
+  = f.input :especie, :label => 'especie'
+  = f.input :raca, :label => 'raca'
+  = f.input :situacao, :label => 'situacao'
+  = f.input :sexo, :label => 'sexo'
+  = f.input :descricao, :label => 'descricao'
+  = f.input :instituicao, :member_label => :nome, :label => 'Instituicao'
+  = f.submit 'Salvar'

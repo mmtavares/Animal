@@ -1,0 +1,33 @@
+<h1>Listing animals</h1>
+
+<table>
+  <tr>
+    <th>Especie</th>
+    <th>Raca</th>
+    <th>Situacao</th>
+    <th>Sexo</th>
+    <th>Descricao</th>
+    <th>Instituicao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%= animal.especie %></td>
+    <td><%= animal.raca %></td>
+    <td><%= animal.situacao %></td>
+    <td><%= animal.sexo %></td>
+    <td><%= animal.descricao %></td>
+    <td><%= animal.instituicao %></td>
+    <td><%= link_to 'Show', animal %></td>
+    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Excluir', animal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Animal', new_animal_path %>
