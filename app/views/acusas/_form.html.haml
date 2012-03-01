@@ -1,0 +1,7 @@
+= semantic_form_for(@acusa) do |f|
+  = f.input :motivo, :label => 'motivo'
+  = f.input :estadosaude, :label => 'estadosaude'
+
+  = f.input :instituicao, :member_label => :nome, :label => 'Instituicao'
+
+  = f.submit 'Salvar'

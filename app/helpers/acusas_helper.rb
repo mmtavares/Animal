@@ -1,0 +1,2 @@
+module AcusasHelper
+end

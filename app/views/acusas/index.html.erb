@@ -1,0 +1,27 @@
+<h1>Listing acusas</h1>
+
+<table>
+  <tr>
+    <th>Motivo</th>
+    <th>Estadosaude</th>
+    <th>Instituicao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @acusas.each do |acusa| %>
+  <tr>
+    <td><%= acusa.motivo %></td>
+    <td><%= acusa.estadosaude %></td>
+    <td><%= acusa.instituicao %></td>
+    <td><%= link_to 'Show', acusa %></td>
+    <td><%= link_to 'Edit', edit_acusa_path(acusa) %></td>
+    <td><%= link_to 'Excluir', acusa, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Acusa', new_acusa_path %>

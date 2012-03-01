@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Motivo:</b>
+  <%= @acusa.motivo %>
+</p>
+
+<p>
+  <b>Estadosaude:</b>
+  <%= @acusa.estadosaude %>
+</p>
+
+<p>
+  <b>Instituicao:</b>
+  <%= @acusa.instituicao.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_acusa_path(@acusa) %> |
+<%= link_to 'Back', acusas_path %>
