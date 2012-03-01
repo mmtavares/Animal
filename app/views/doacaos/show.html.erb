@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @doacao.nome %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @doacao.rg %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @doacao.cpf %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @doacao.telefone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @doacao.email %>
+</p>
+
+<p>
+  <b>Idade:</b>
+  <%= @doacao.idade %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @doacao.bairro %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @doacao.cidade %>
+</p>
+
+<p>
+  <b>Uf:</b>
+  <%= @doacao.uf %>
+</p>
+
+<p>
+  <b>Rua:</b>
+  <%= @doacao.rua %>
+</p>
+
+<p>
+  <b>Nomeanimal:</b>
+  <%= @doacao.nomeanimal %>
+</p>
+
+<p>
+  <b>Instituicao:</b>
+  <%= @doacao.instituicao.nome %>
+</p>
+
+<p>
+  <b>Agenda:</b>
+  <%= @doacao.agenda.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_doacao_path(@doacao) %> |
+<%= link_to 'Back', doacaos_path %>

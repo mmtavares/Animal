@@ -1,0 +1,47 @@
+<h1>Listing doacaos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Rg</th>
+    <th>Cpf</th>
+    <th>Telefone</th>
+    <th>Email</th>
+    <th>Idade</th>
+    <th>Bairro</th>
+    <th>Cidade</th>
+    <th>Uf</th>
+    <th>Rua</th>
+    <th>Nomeanimal</th>
+    <th>Instituicao</th>
+    <th>Agenda</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doacaos.each do |doacao| %>
+  <tr>
+    <td><%= doacao.nome %></td>
+    <td><%= doacao.rg %></td>
+    <td><%= doacao.cpf %></td>
+    <td><%= doacao.telefone %></td>
+    <td><%= doacao.email %></td>
+    <td><%= doacao.idade %></td>
+    <td><%= doacao.bairro %></td>
+    <td><%= doacao.cidade %></td>
+    <td><%= doacao.uf %></td>
+    <td><%= doacao.rua %></td>
+    <td><%= doacao.nomeanimal %></td>
+    <td><%= doacao.instituicao %></td>
+    <td><%= doacao.agenda %></td>
+    <td><%= link_to 'Show', doacao %></td>
+    <td><%= link_to 'Edit', edit_doacao_path(doacao) %></td>
+    <td><%= link_to 'Excluir', doacao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doacao', new_doacao_path %>
