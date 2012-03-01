@@ -1,0 +1,45 @@
+<h1>Listing adocaos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Rg</th>
+    <th>Cpf</th>
+    <th>Telefone</th>
+    <th>Email</th>
+    <th>Idade</th>
+    <th>Bairro</th>
+    <th>Cidade</th>
+    <th>Uf</th>
+    <th>Rua</th>
+    <th>Instituicao</th>
+    <th>Agenda</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @adocaos.each do |adocao| %>
+  <tr>
+    <td><%= adocao.nome %></td>
+    <td><%= adocao.rg %></td>
+    <td><%= adocao.cpf %></td>
+    <td><%= adocao.telefone %></td>
+    <td><%= adocao.email %></td>
+    <td><%= adocao.idade %></td>
+    <td><%= adocao.bairro %></td>
+    <td><%= adocao.cidade %></td>
+    <td><%= adocao.uf %></td>
+    <td><%= adocao.rua %></td>
+    <td><%= adocao.instituicao %></td>
+    <td><%= adocao.agenda %></td>
+    <td><%= link_to 'Show', adocao %></td>
+    <td><%= link_to 'Edit', edit_adocao_path(adocao) %></td>
+    <td><%= link_to 'Excluir', adocao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Adocao', new_adocao_path %>

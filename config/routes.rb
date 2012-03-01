@@ -1,4 +1,6 @@
 Animalbom::Application.routes.draw do
+  resources :adocaos
+
   resources :doacaos
 
   resources :acusas

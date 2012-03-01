@@ -1,0 +1,15 @@
+= semantic_form_for(@adocao) do |f|
+  = f.input :nome, :label => 'nome'
+  = f.input :rg, :label => 'rg'
+  = f.input :cpf, :label => 'cpf'
+  = f.input :telefone, :label => 'telefone'
+  = f.input :email, :label => 'email'
+  = f.input :idade, :label => 'idade'
+  = f.input :bairro, :label => 'bairro'
+  = f.input :cidade, :label => 'cidade'
+  = f.input :uf, :label => 'uf'
+  = f.input :rua, :label => 'rua'
+  = f.input :instituicao, :member_label => :nome, :label => 'Instituicao'
+  = f.input :agenda, :member_label => :nome, :label => 'Agenda'
+   
+  = f.submit 'Salvar'
